@@ -1,0 +1,19 @@
+{
+  "name": "websitestart",
+  "version": "1.0.0",
+  "description": "## [Surge link](https://LarsKerstensDesign.surge.sh \"Surge link\")",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run dev",
+    "dev": "npm-run-all --parallel sass-dev server-dev",
+    "sass-dev": "sass ./src/css/style.scss ./dist/style.css --watch",
+    "server-dev": "live-server",
+    "build": "npm-run-all --serial clean sass-prod deploy",
+    "clean": "rm -r ./dist/",
+    "sass-prod": "sass ./src/css/styles.scss ./dist/style.css --no-source-map --style=compressed",
+    "deploy": "surge . --domain https://LarsKerstensDesign.surge.sh"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
