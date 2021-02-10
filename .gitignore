@@ -1,2 +1,4 @@
-dist/
-assets/
+dist
+.cache
+build
+node_modules
