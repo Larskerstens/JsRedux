@@ -1,3 +1,3 @@
 Standaard web-sjabloon
 
-## [Surge link](https://LarsKerstensDesign.surge.sh "Surge link")
+## [Surge link](https://LarsKerstensRedux.surge.sh "Surge link")
