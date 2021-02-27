@@ -1,7 +1,7 @@
 {
   "name": "websitestart",
   "version": "1.0.0",
-  "description": "## [Surge link](https://LarsKerstensDesign.surge.sh \"Surge link\")",
+  "description": "## [Surge link](https://LarsKerstensRedux.surge.sh \"Surge link\")",
   "main": "index.js",
   "scripts": {
     "start": "npm run dev",
@@ -13,9 +13,17 @@
     "clean": "rm -rf ./build/ ./.cache",
     "sass-prod": "sass ./src/css/style.scss build/css/style.css --no-source-map --style=compressed",
     "js-prod": "parcel build ./src/js/index.js --out-dir ./build/js --out-file bundle.js  --no-source-maps",
-    "deploy": "surge . --domain https://LarsKerstensDesign.surge.sh"
+    "deploy": "surge . --domain https://LarsKerstensRedux.surge.sh"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "redux": "^4.0.5",
+    "redux-logger": "^3.0.6",
+    "uuid": "^8.3.2"
+  },
+  "browserslist": [
+    "last 1 Chrome version"
+  ]
 }

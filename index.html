@@ -10,29 +10,49 @@
     <link rel="stylesheet" href="./build/css/style.css" />
   </head>
   <body>
-    <!------------------ HEADER---------------------------->
-    <header>
-      <h1>Hoofdtitel 1</h1>
-      <h2>Hoofdtitel 2</h2>
-      <h3>Hoofdtitel 3</h3>
-      <h4>Hoofdtitel 4</h4>
-      <h5>Hoofdtitel 5</h5>
-    </header>
-    <!------------------ Main------------------------------>
-    <main>
-      <a href="" class="logo">
-        <svg class="icon icon-profile-male">
-          <use xlink:href="./icons/symbol-defs.svg#icon-profile-male"></use>
-        </svg>
-      </a>
-    </main>
-    <!------------------ Footer---------------------------->
-    <footer>
-      <figure>
-        <img src="./images/thailand.jpeg" alt="foto thailand" />
-        <figcaption>thailand</figcaption>
-      </figure>
-    </footer>
+    <h1>Redux</h1>
+    <hr />
+    <h2>Counter</h2>
+    <p>Countervalue: <span id="counter">XX</span></p>
+    <button id="inc">+</button>
+    <button id="dec">-</button>
+    <input type="text" id="input" value="XX" />
+    <hr />
+    <h2>Klasvrienden</h2>
+    <ul id="vrienden"></ul>
+    <form action="" id="vriendenform">
+      <input type="text" />
+      <button>Add friends</button>
+    </form>
+    <hr />
+    <h2>Persoon</h2>
+    <p>
+      Name: <span id="persoonname">XX</span
+      ><input type="text" value="XX" id="namefield" />
+    </p>
+    <p>
+      Age: <span id="persoonage">XX</span
+      ><input type="text" value="XX" id="agefield" />
+    </p>
+    <hr />
+    <h2>Moviesearcher</h2>
+    <form action="" id="movieform">
+      <input type="text" />
+      <button>Search</button>
+    </form>
+    <h3>Results for "<span id="movietitle"></span>"</h3>
+    <p id="movieloading">Loading...</p>
+    <ul id="moviegrid"></ul>
+    <hr />
+    <h2>Cocktailsearcher</h2>
+    <form action="" id="cocktailform">
+      <input type="text" />
+      <button>Search</button>
+    </form>
+    <h3>Results for "<span id="cocktailtitle"></span>"</h3>
+    <p id="cocktailloading">Loading...</p>
+    <ul id="cocktailgrid"></ul>
+
     <script src="./build/js/bundle.js"></script>
     <script src="./icons/svgxuse.js"></script>
   </body>
