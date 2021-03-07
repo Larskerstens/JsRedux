@@ -2,6 +2,7 @@ import store from "./redux/store";
 import * as actions from "./redux/counter";
 import * as action from "./redux/person";
 import { ADD, REMOVE } from "./redux/klasvrienden";
+import { getMovie } from "./redux/movie";
 
 // COUNTER
 
@@ -69,4 +70,30 @@ document.getElementById("namefield").oninput = (e) => {
 };
 document.getElementById("agefield").oninput = (e) => {
   store.dispatch(action.setAge(parseInt(e.target.value)));
+};
+
+// MOVIE
+function movieRender() {
+  const { movie, loading, movies } = store.getState().movieState;
+  document.getElementById("movietitle").innerText = movie;
+  if (loading) {
+    document.getElementById("movieloading").style.display = "block";
+  } else {
+    document.getElementById("movieloading").style.display = "none";
+  }
+  if (movies) {
+    document.getElementById("moviegrid").innerHTML = movies
+      .map((movie) => `<li>${movie.title}</li>`)
+      .join("");
+  } else {
+    document.getElementById("moviegrid").style.display = "none";
+  }
+}
+movieRender();
+store.subscribe(movieRender);
+
+document.getElementById("movieform").onsubmit = (e) => {
+  e.preventDefault();
+  store.dispatch(getMovie(document.querySelector("#movieform input").value));
+  document.querySelector("#movieform input").value = "";
 };
